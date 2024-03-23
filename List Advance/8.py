@@ -1,5 +1,4 @@
-def decipher_message(messages):
-    words = messages.split()
+def decipher_message(words):
     deciphered_words = []
 
     for word in words:
@@ -21,5 +20,5 @@ def decipher_message(messages):
 
     return ' '.join(deciphered_words)
 
-message = input()
+message = input().split()
 print(decipher_message(message))
