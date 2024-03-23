@@ -10,8 +10,8 @@ class Catalogue:
         return list([product for product in self.products if product.startswith(char)])
 
     def __repr__(self):
-        print('Items in the', self.name, 'catalogue:')
-        return '\n'.join(sorted(self.products))
+        result = f"Items in the {self.name} catalogue:\n{'\n'.join(sorted(self.products))}"
+        return result
 
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
