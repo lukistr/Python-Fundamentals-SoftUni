@@ -17,7 +17,7 @@ function zadacha3(data) {
                 areaObj[area][name] = 1;
             }
         } else if(commands[0] === "Feed") {
-            let [name, food, count] = commands[1].split("-");
+            let [name, food] = commands[1].split("-");
             if(name in animalsObj) {
                 animalsObj[name].food -= food;
 
@@ -38,7 +38,7 @@ function zadacha3(data) {
     }
 
     console.log(`Areas with hungry animals:`);
-    for(let [line, values] of Object.entries(areaObj)) {
+    for(let [line] of Object.entries(areaObj)) {
         console.log(Object.keys(areaObj[line]))
         console.log(`${line}: ${Object.keys(areaObj[line]).length}`);
     }
